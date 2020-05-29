@@ -1688,7 +1688,7 @@ __webpack_require__.r(__webpack_exports__);
 let DataService = class DataService {
     constructor(http) {
         this.http = http;
-        this.url = 'https://ferrari-blog.herokuapp.com/';
+        this.url = 'https://ferrari-blog.herokuapp.com';
     }
     getAll() {
         return this.http.get(this.url + '/api/posts');
