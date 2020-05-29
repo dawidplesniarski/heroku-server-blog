@@ -2896,7 +2896,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, AuthService);
 
         this.http = http;
-        this.url = 'https://ferrari-blog.herokuapp.com';
+        this.url = 'https://ferrari-blog.herokuapp.com/api';
       }
 
       _createClass(AuthService, [{
@@ -3012,7 +3012,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, DataService);
 
         this.http = http;
-        this.url = 'https://ferrari-blog.herokuapp.com';
+        this.url = 'https://ferrari-blog.herokuapp.com/';
       }
 
       _createClass(DataService, [{
