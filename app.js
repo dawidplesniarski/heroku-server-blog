@@ -39,6 +39,6 @@ app.get('/*', function (req, res) {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.listen(config.port, () => {
-  console.info(`Server is running at ${config.port}`)
+app.listen(process.env.PORT || 3000, function () {
+  console.info('Server is running')
 });
