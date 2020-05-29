@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<selectize></selectize>\n<div id=\"logo\">\n  <img src=\"https://seeklogo.com/images/F/ferrari-logo-7935CF173C-seeklogo.com.png\">\n</div>\n<div *ngFor=\"let item of items$ | filter:filterText\">\n  <div class=\"blog-items\">\n    <blog-item [id]=\"item.id\" [image]=\"item.url\" [text]=\"item.content\">\n    </blog-item>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<selectize></selectize>\n<div *ngFor=\"let item of items$ | filter:filterText\">\n  <div class=\"blog-items\">\n    <blog-item [id]=\"item.id\" [image]=\"item.url\" [text]=\"item.content\">\n    </blog-item>\n  </div>\n</div>\n");
 
 /***/ }),
 
