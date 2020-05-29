@@ -25,10 +25,10 @@
     "mongoose": "^5.9.13",
     "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.10.0",
-    "sha1": "^1.1.1"
+    "sha1": "^1.1.1",
+    "bluebird": "^3.7.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3",
-    "bluebird": "^3.7.2"
+    "nodemon": "^2.0.3"
   }
 }
