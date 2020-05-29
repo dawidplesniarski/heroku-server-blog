@@ -1616,7 +1616,7 @@ __webpack_require__.r(__webpack_exports__);
 let AuthService = class AuthService {
     constructor(http) {
         this.http = http;
-        this.url = 'http://localhost:3000/api';
+        this.url = 'https://ferrari-blog.herokuapp.com';
     }
     authenticate(credentials) {
         return this.http.post(this.url + '/user/auth', {
@@ -1688,7 +1688,7 @@ __webpack_require__.r(__webpack_exports__);
 let DataService = class DataService {
     constructor(http) {
         this.http = http;
-        this.url = 'http://localhost:3000';
+        this.url = 'https://ferrari-blog.herokuapp.com';
     }
     getAll() {
         return this.http.get(this.url + '/api/posts');
