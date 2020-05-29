@@ -2884,73 +2884,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! rxjs/operators */
-    "./node_modules/rxjs/_esm2015/operators/index.js"); // @Injectable()
-    // export class AuthService {
-    //
-    //   private url = 'https://ferrari-blog.herokuapp.com/api';
-    //
-    //   constructor(private http: HttpClient) {
-    //   }
-    //
-    //   authenticate(credentials) {
-    //     return this.http.post(this.url + '/user/auth', {
-    //       login: credentials.login,
-    //       password: credentials.password
-    //     }).pipe(
-    //       map((result: Token) => {
-    //         if (result && result.token) {
-    //           localStorage.setItem('token', result.token);
-    //           return true;
-    //         }
-    //         return false;
-    //       })
-    //     );
-    //   }
-    //
-    //   createOrUpdate(credentials) {
-    //     return this.http.post(this.url + '/user/create', credentials);
-    //   }
-    //
-    //   logout() {
-    //     return this.http.delete(this.url + '/user/logout/' + this.currentUser.userId)
-    //       .pipe(
-    //         map(() => {
-    //           localStorage.removeItem('token');
-    //         })
-    //       );
-    //   }
-    //
-    //   isLoggedIn() {
-    //     const jwtHelper = new JwtHelper();
-    //     const token = localStorage.getItem('token');
-    //     if (!token) {
-    //       return false;
-    //     }
-    //     return !(jwtHelper.isTokenExpired(token));
-    //   }
-    //
-    //   get currentUser() {
-    //     const token = this.getToken();
-    //     if (!token) {
-    //       return null;
-    //     }
-    //
-    //     return new JwtHelper().decodeToken(token);
-    //   }
-    //
-    //
-    //   getToken() {
-    //     return localStorage.getItem('token');
-    //   }
-    // }
-
+    "./node_modules/rxjs/_esm2015/operators/index.js");
 
     var AuthService = /*#__PURE__*/function () {
       function AuthService(http) {
         _classCallCheck(this, AuthService);
 
         this.http = http;
-        this.url = 'https://blog-tai-angular.herokuapp.com/api';
+        this.url = 'https://ferrari-blog.herokuapp.com/api';
       }
 
       _createClass(AuthService, [{
