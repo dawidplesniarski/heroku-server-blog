@@ -19,7 +19,9 @@ const userEndpoint = (router) => {
 
   router.post('/api/user/create', async (request, response, next) => {
     try {
-      let result = await business(request).getUserManager(request).createNewOrUpdate(request.body);
+      let result = await business(request)
+        .getUserManager(request)
+        .createNewOrUpdate(request.body);
       response.status(200).send(result);
     } catch (error) {
       applicationException.errorHandler(error, response);

@@ -1568,11 +1568,6 @@ let AuthGuard = class AuthGuard {
     constructor(authService) {
         this.authService = authService;
     }
-    // canActivate(
-    //   next: ActivatedRouteSnapshot,
-    //   state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    //   return true;
-    // }
     canActivate() {
         if (this.authService.isLoggedIn()) {
             return true;
@@ -1613,16 +1608,77 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// @Injectable()
+// export class AuthService {
+//
+//   private url = 'https://ferrari-blog.herokuapp.com/api';
+//
+//   constructor(private http: HttpClient) {
+//   }
+//
+//   authenticate(credentials) {
+//     return this.http.post(this.url + '/user/auth', {
+//       login: credentials.login,
+//       password: credentials.password
+//     }).pipe(
+//       map((result: Token) => {
+//         if (result && result.token) {
+//           localStorage.setItem('token', result.token);
+//           return true;
+//         }
+//         return false;
+//       })
+//     );
+//   }
+//
+//   createOrUpdate(credentials) {
+//     return this.http.post(this.url + '/user/create', credentials);
+//   }
+//
+//   logout() {
+//     return this.http.delete(this.url + '/user/logout/' + this.currentUser.userId)
+//       .pipe(
+//         map(() => {
+//           localStorage.removeItem('token');
+//         })
+//       );
+//   }
+//
+//   isLoggedIn() {
+//     const jwtHelper = new JwtHelper();
+//     const token = localStorage.getItem('token');
+//     if (!token) {
+//       return false;
+//     }
+//     return !(jwtHelper.isTokenExpired(token));
+//   }
+//
+//   get currentUser() {
+//     const token = this.getToken();
+//     if (!token) {
+//       return null;
+//     }
+//
+//     return new JwtHelper().decodeToken(token);
+//   }
+//
+//
+//   getToken() {
+//     return localStorage.getItem('token');
+//   }
+// }
 let AuthService = class AuthService {
     constructor(http) {
         this.http = http;
-        this.url = 'https://ferrari-blog.herokuapp.com/api';
+        this.url = 'https://blog-tai-angular.herokuapp.com/api';
     }
     authenticate(credentials) {
-        return this.http.post(this.url + '/user/auth', {
+        return this.http
+            .post(this.url + '/user/auth', {
             login: credentials.login,
             password: credentials.password
-        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((result) => {
+        })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((result) => {
             if (result && result.token) {
                 localStorage.setItem('token', result.token);
                 return true;
@@ -1634,8 +1690,7 @@ let AuthService = class AuthService {
         return this.http.post(this.url + '/user/create', credentials);
     }
     logout() {
-        return this.http.delete(this.url + '/user/logout/' + this.currentUser.userId)
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(() => {
+        return this.http.delete(this.url + '/user/logout/' + this.currentUser.userId).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(() => {
             localStorage.removeItem('token');
         }));
     }
@@ -1645,7 +1700,7 @@ let AuthService = class AuthService {
         if (!token) {
             return false;
         }
-        return !(jwtHelper.isTokenExpired(token));
+        return !jwtHelper.isTokenExpired(token);
     }
     get currentUser() {
         const token = this.getToken();
